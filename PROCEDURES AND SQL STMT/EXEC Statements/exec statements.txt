@@ -1,0 +1,67 @@
+exec statements:
+
+1) exec Create_an_account('morgan@hp.com','morgan','M','morgan','Houston','USA','I am looking for opportunities in the field Sales'); --valid
+exec Create_an_account('tracy@hp.com','tracy','A','tracy','Seattle','USA','I am looking for opportunities in the field of IT');  --invalid
+
+2)exec feature2('admin2@mylinkedin.com','admin2','a'); --valid
+
+exec feature2('hiren@mylinkedin.com','hiren','m'); --valid
+
+exec feature2('fbhddgf','fnjdf','a'); --invalid
+
+3) exec Usage_report('ashwini@mylinkedin.com','ashwini','M',1); --valid
+exec Usage_report('priyanka@mylinkedin.com','priyanka','A',13); --invalid
+
+
+4)exec selectSkill('megha@mylinkedin.com','megha','M',1,skill_n('java'));   --valid
+exec selectSkill('megha@mylinkedin.com','megha','M',2,skill_n('C++',’SQL’));  --valid 
+exec selectSkill('megha@mylinkedin.com','megha','M',1,skill_n('R',’python’));  --invalid
+
+5)EXEC feature5('pranay@mylinkedin.com','pranay','M','TCS','HR','02-JAN-09','02-DEC-09','recruiting people for the organization'); --valid
+
+EXEC feature5('admin1@mylinkedn.com','admin1','A','INTUIT','Business Analyst','05-JAN-12','06-DEC-14','pqrst'); --invalid
+
+6) exec REMOVE_GROUP('priyanka@mylinkedin.com', 'priyanka', 'M', 'UMBC Alumni'); --valid 
+exec REMOVE_GROUP('admin1@mylinkedin.com', 'admin', 'A', 'UMBC Alumni'); -- invalid 
+
+
+7)exec feature7('awini@mylinkedin.com'); --invalid
+   exec feature7('ashwini@mylinkedin.com'); --valid
+
+8) exec get_Prof_profile('megha@mylinkedin.com','megha','M');  --valid
+
+
+9)exec New_connection('ashwini@mylinkedin.com','ashwini','M','morgan@hp.com');  --valid
+
+exec New_connection('hiren@mylinkedin.com','hiren','A','trisha@amazon.com');  --invalid
+
+
+10)exec feature10 ('ashwini@mylinkedin.com','harry@amazon.com','intelligent'); --valid
+exec feature10 ('harry@amazon.com','ashwini@mylinkedin.com','hardworking'); --valid
+exec feature10 ('ashwini@mylinkedin.com','abc@zxy.com','intelligent'); --valid
+exec FEATURE10('harry@amazon.com','ashwini@mylinkedin.com','dbhsdgh');--invalid
+
+11) exec endorse_skill('hiren@mylinkedin.com','hiren','C++','M','ashwini@mylinkedin.com');  --valid
+exec endorse_skill('hiren@mylinkedin.com','hiren','C','M','ashwini@mylinkedin.com');  --invalid
+
+12)exec feature12('megha@mylinkedin.com','megha','M'); --valid
+     exec feature12('pranay@mylinkedin.com','pranay','M'); --valid
+     exec feature12('pranay1@mylinkedin.com','pranay1','M');  ---invalid
+
+13)exec feature13('pranay@mylinkedin.com','pranay','M','I'); --valid
+
+    exec feature13('priyanka@mylinkedin.com','priyanka','M','happy'); --invalid
+
+
+14) exec set_account_inactive ('admin1@mylinkedin.com', 'admin1', 'A', 'priyanka1@mylinkedin.com'); -- valid
+exec set_account_inactive ('admin1@mylinkedin.com', 'admin1', 'A', 'priyanka1@mylinkedin.com'); --invalid (since this member’s account is already set to inactive)
+
+15) exec summary_report('admin1@mylinkedin.com','admin1', 'A'); --valid
+exec summary_report('priyanka@mylinkedin.com','priyanka', 'M'); --invalid
+
+16)exec feature16('admin1@mylinkedin.com','admin','A',sysdate+interval '1' year);--checking inactive user
+exec feature16('admin1@mylinkedin.com','admin','A',sysdate+interval '2-1' year to month);--checking recommendation
+  exec feature16('gsfhfdjh@mylinkedin.com','admin','A',sysdate+interval '1' year);--invalid 
+
+17) exec feature17('megha@mylinkedin.com','megha','M');  --valid
+
